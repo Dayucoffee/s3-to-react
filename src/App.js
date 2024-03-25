@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h1>React Posts Sharer</h1>
+        <h1>React Posts!</h1>
       </header>
     </div>
   );
