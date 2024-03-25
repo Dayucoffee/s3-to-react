@@ -1,33 +1,20 @@
-/* src/App.css */
+// MyComponent.jsx
+import React, { useState } from 'react';
+import './Styles.css';
 
-.App {
-  text-align: center;
-  margin: 0 auto;
-  max-width: 1000px;
-}
+const MyComponent = () => {
+  const [isClicked, setIsClicked] = useState(false);
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+  const handleClick = () => {
+    setIsClicked(!isClicked);
+  };
 
-.App-header {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-}
-
-li {
-  list-style-type: none;
-}
-
-.post {
-  margin-bottom: 4em;
-}
-
-.post h4 {
-  font-size: 2rem;
-}
+  return (
+    <div
+      className={isClicked ? 'clickedClass' : 'normalClass'}
+      onClick={handleClick}
+    >
+      Howdy, Universe! Abundance All the way!!
+    </div>
+  );
+};
